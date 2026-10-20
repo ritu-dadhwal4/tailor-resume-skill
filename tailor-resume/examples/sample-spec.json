@@ -1,0 +1,31 @@
+{
+  "name": "Alex Sharma",
+  "contact": ["alex@example.com", "+91 98765 43210", "Bengaluru, India", "linkedin.com/in/alexsharma"],
+  "summary": "Full stack software developer with {g:4+ years} of experience building {b:distributed systems, microservices} and {b:cloud services} on AWS and Azure.",
+  "skills": [
+    {"label": "Languages", "items": "Python, Java, C++, JavaScript"},
+    {"label": "Cloud & DevOps", "items": "{b:AWS}, Azure, {b:Kubernetes}, {b:Docker}, {b:CI/CD}, Jenkins"},
+    {"label": "Data", "items": "SQL, MongoDB, {b:Kafka}, Spark"}
+  ],
+  "experience": [
+    {"company": "HCL Technologies", "title": "{b:Software Development Engineer}", "location": "Tokyo, Japan", "dates": "Jan 2023 - Jun 2023",
+     "bullets": [
+       "Built the drive-mode menu for a Sony camera using MVC, reaching {g:10% higher accuracy} than earlier features",
+       "{y:Mentored 3 junior developers} through GitHub code reviews, cutting JIRA bugs by {g:40%}"
+     ]},
+    {"company": "HCL Technologies", "title": "{b:Software Development Engineer}", "location": "Bengaluru, India", "dates": "Feb 2021 - Jan 2023",
+     "bullets": [
+       "{y:Led a team of 4 engineers} to build an image-annotation tool {b:deployed on AWS with Kubernetes}",
+       "{y:Scaled the service} to handle {g:2x requests} and cut API response time by {g:25%}",
+       "Detected dents in car parts with TensorFlow at {g:95% accuracy}"
+     ]}
+  ],
+  "projects": [
+    {"name": "FindMyRoom", "text": "Shipped a rental marketplace in {g:4 months} with Google Maps, Facebook and Stripe APIs"},
+    {"name": "DashKart", "text": "{y:Pitched an IoT self-checkout idea} to the NITK entrepreneurship cell and won backing from {g:3 investors}"}
+  ],
+  "education": [
+    {"school": "The University of Texas at Austin", "degree": "MS, Information Technology & Management", "dates": "May 2024"},
+    {"school": "NIT Karnataka, Surathkal", "degree": "B.Tech, Mechanical Engineering", "dates": "May 2019"}
+  ]
+}
