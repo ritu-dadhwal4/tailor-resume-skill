@@ -279,7 +279,17 @@ def main():
     b.doc.save(a.out)
 
     raw = json.dumps(spec, ensure_ascii=False)
-    holes = PLACEHOLDER.findall(raw)
+
+    def strings(v):
+        if isinstance(v, str):
+            yield v
+        elif isinstance(v, dict):
+            for x in v.values():
+                yield from strings(x)
+        elif isinstance(v, list):
+            for x in v:
+                yield from strings(x)
+    holes = [h for t in strings(spec) for h in PLACEHOLDER.findall(t)]
     est = b.lines / LINES_PER_PAGE
     print(f"saved: {a.out}")
     print(f"estimated length: {est:.2f} pages (target {a.pages})")
@@ -290,7 +300,7 @@ def main():
     counts = {c: len(re.findall(r"\{" + c + r":", raw)) for c in "ygb"}
     print("highlights: " + ", ".join(f"{LABELS[c]}={counts[c]}{'' if c in enabled else ' (off)'}" for c in "ygb"))
     if holes:
-        print(f"PLACEHOLDERS TO FILL: {len(PLACEHOLDER.findall(raw))} (search the doc for '[')")
+        print(f"PLACEHOLDERS TO FILL: {len(holes)} (search the doc for '[')")
 
 
 if __name__ == "__main__":
